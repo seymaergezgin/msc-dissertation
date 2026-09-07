@@ -1,0 +1,620 @@
+# first test 
+((env_dissertation) ) (base) seymanurergezgin@MacBook-Pro-2 github % source env_dissertation/bin/activate
+python3 -c "
+from src.document_loader import DocumentLoader
+from src.vector_store import VectorStore
+loader = DocumentLoader(VectorStore())
+print(loader.load_all())
+"
+
+2026-06-26 13:00:21 | INFO     | config.settings | Settings loaded. Project root: /Users/seymanurergezgin/Desktop/gre/thesis/github
+2026-06-26 13:00:23 | INFO     | src.embeddings | Using Ollama embeddings: nomic-embed-text @ http://localhost:11434
+2026-06-26 13:00:23 | INFO     | src.vector_store | VectorStore initialised at: data/embeddings/chroma_store
+2026-06-26 13:00:23 | INFO     | src.document_loader | Loading 1 files from /Users/seymanurergezgin/Desktop/gre/thesis/github/data/documents/risk_metrics...
+2026-06-26 13:00:30 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:00:31 | INFO     | src.vector_store | Added 169/169 documents to collection 'risk_metrics'.
+2026-06-26 13:00:36 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:00:36 | INFO     | src.vector_store | Added 169/169 documents to collection 'all'.
+2026-06-26 13:00:36 | INFO     | src.document_loader |   deutsch_value_at_risk_textbook.pdf → 169 chunks (169 new)
+2026-06-26 13:00:36 | INFO     | src.document_loader | Loading 4 files from /Users/seymanurergezgin/Desktop/gre/thesis/github/data/documents/hedging...
+2026-06-26 13:00:37 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:00:37 | INFO     | src.vector_store | Added 52/52 documents to collection 'hedging'.
+2026-06-26 13:00:39 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:00:39 | INFO     | src.vector_store | Added 52/52 documents to collection 'all'.
+2026-06-26 13:00:39 | INFO     | src.document_loader |   han_2021_bunker_cost_risk_covid_shock.pdf → 52 chunks (52 new)
+2026-06-26 13:00:42 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:00:42 | INFO     | src.vector_store | Added 123/123 documents to collection 'hedging'.
+2026-06-26 13:00:45 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:00:45 | INFO     | src.vector_store | Added 123/123 documents to collection 'all'.
+2026-06-26 13:00:45 | INFO     | src.document_loader |   bai_2022_financial_operational_risk_shipping.pdf → 123 chunks (123 new)
+2026-06-26 13:00:50 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:00:50 | INFO     | src.vector_store | Added 125/125 documents to collection 'hedging'.
+2026-06-26 13:00:54 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:00:54 | INFO     | src.vector_store | Added 125/125 documents to collection 'all'.
+2026-06-26 13:00:54 | INFO     | src.document_loader |   kavussanos_2022_hedging_imo2020_futures.pdf → 125 chunks (125 new)
+2026-06-26 13:00:57 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:00:57 | INFO     | src.vector_store | Added 108/108 documents to collection 'hedging'.
+2026-06-26 13:00:59 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:00:59 | INFO     | src.vector_store | Added 108/108 documents to collection 'all'.
+2026-06-26 13:00:59 | INFO     | src.document_loader |   sun_2023_bunker_hedging_cvar_optimization.pdf → 108 chunks (108 new)
+2026-06-26 13:00:59 | INFO     | src.document_loader | Loading 8 files from /Users/seymanurergezgin/Desktop/gre/thesis/github/data/documents/maritime...
+2026-06-26 13:01:41 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 400 Bad Request"
+2026-06-26 13:01:41 | ERROR    | src.document_loader | Failed to load stopford_maritime_economics_3rd_ed.pdf: Post "http://127.0.0.1:54383/tokenize": read tcp 127.0.0.1:57923->127.0.0.1:54383: read: connection reset by peer (status code: 400)
+2026-06-26 13:01:43 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:01:43 | INFO     | src.vector_store | Added 72/72 documents to collection 'maritime'.
+2026-06-26 13:01:45 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:01:45 | INFO     | src.vector_store | Added 72/72 documents to collection 'all'.
+2026-06-26 13:01:45 | INFO     | src.document_loader |   cimac_2019_marine_fuel_stability_compatibility.pdf → 72 chunks (72 new)
+2026-06-26 13:01:45 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:01:45 | INFO     | src.vector_store | Added 24/24 documents to collection 'maritime'.
+2026-06-26 13:01:46 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:01:46 | INFO     | src.vector_store | Added 24/24 documents to collection 'all'.
+2026-06-26 13:01:46 | INFO     | src.document_loader |   imo_marpol_annex_vi_supplement_2019.pdf → 24 chunks (24 new)
+2026-06-26 13:01:46 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:01:46 | INFO     | src.vector_store | Added 5/5 documents to collection 'maritime'.
+2026-06-26 13:01:46 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:01:46 | INFO     | src.vector_store | Added 5/5 documents to collection 'all'.
+2026-06-26 13:01:46 | INFO     | src.document_loader |   marpol_annex_vi_overview.pdf → 5 chunks (5 new)
+2026-06-26 13:01:49 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:01:49 | INFO     | src.vector_store | Added 84/84 documents to collection 'maritime'.
+2026-06-26 13:01:51 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:01:51 | INFO     | src.vector_store | Added 84/84 documents to collection 'all'.
+2026-06-26 13:01:51 | INFO     | src.document_loader |   imo_mepc320_74_sulphur_implementation_guidelines.pdf → 84 chunks (84 new)
+2026-06-26 13:01:54 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:01:54 | INFO     | src.vector_store | Added 139/139 documents to collection 'maritime'.
+2026-06-26 13:01:57 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:01:57 | INFO     | src.vector_store | Added 139/139 documents to collection 'all'.
+2026-06-26 13:01:57 | INFO     | src.document_loader |   ics_2019_sulphur_cap_compliance_guide.pdf → 139 chunks (139 new)
+2026-06-26 13:02:06 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 400 Bad Request"
+2026-06-26 13:02:06 | ERROR    | src.document_loader | Failed to load imo_mepc70_fuel_oil_availability_assessment_2016.pdf: Post "http://127.0.0.1:54383/tokenize": read tcp 127.0.0.1:63476->127.0.0.1:54383: read: connection reset by peer (status code: 400)
+2026-06-26 13:02:07 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:02:07 | INFO     | src.vector_store | Added 22/22 documents to collection 'maritime'.
+2026-06-26 13:02:08 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-26 13:02:08 | INFO     | src.vector_store | Added 22/22 documents to collection 'all'.
+2026-06-26 13:02:08 | INFO     | src.document_loader |   imo_2020_sulphur_limit_faq.pdf → 22 chunks (22 new)
+2026-06-26 13:02:08 | INFO     | src.document_loader | Total chunks loaded: 923
+{'risk_metrics': 169, 'hedging': 408, 'maritime': 346}
+((env_dissertation) ) (base) seymanurergezgin@MacBook-Pro-2 github % python3 -c "
+from pprint import pprint
+from src.rag_pipeline import RAGPipeline
+
+r = RAGPipeline().query('What is VaR at 95% confidence?')
+pprint(r)
+"
+2026-06-29 14:47:41 | INFO     | config.settings | Settings loaded. Project root: /Users/seymanurergezgin/Desktop/gre/thesis/github
+2026-06-29 14:47:44 | INFO     | src.embeddings | Using Ollama embeddings: nomic-embed-text @ http://localhost:11434
+2026-06-29 14:47:44 | INFO     | src.vector_store | VectorStore initialised at: data/embeddings/chroma_store
+2026-06-29 14:47:44 | INFO     | src.llm_provider | Using LLM provider: ollama (model: llama3.1:8b)
+2026-06-29 14:47:44 | INFO     | src.cost_tracker | Created cost log: /Users/seymanurergezgin/Desktop/gre/thesis/github/data/cost_logs/api_costs.csv
+2026-06-29 14:47:44 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 14:51:44 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-29 15:14:47 | INFO     | src.llm_provider | Ollama (llama3.1:8b) responded in 1622.00s
+2026-06-29 15:14:47 | INFO     | src.rag_pipeline | RAG query answered in 1622.92s | 5 context chunks | provider: ollama
+{'answer': 'Based on the context documents provided, I can attempt to answer '
+           'your question.\n'
+           '\n'
+           'VaR (Value-at-Risk) is a measure of risk that estimates the '
+           'potential loss in value of a portfolio over a specific time '
+           'horizon with a given confidence level. The confidence level is '
+           'typically expressed as a percentage.\n'
+           '\n'
+           'From Context 2 — deutsch_value_at_risk_textbook.pdf, page 45, we '
+           'have:\n'
+           '\n'
+           'VaRV(c) = Q1¡c\n'
+           'p\n'
+           'var[±V]\n'
+           '= Q1¡c\n'
+           'p\n'
+           'e¢±§ e¢\n'
+           '= Q1¡c\n'
+           'p\n'
+           '±t\n'
+           'vuut\n'
+           'nX\n'
+           'i;j=1\n'
+           'e¢i¾i½ij¾j e¢j (2.9)\n'
+           '\n'
+           'Here, VaRV(c) is the Value-at-Risk at confidence level c, and '
+           'Q1¡c\n'
+           'p is the c-th quantile of the standard normal distribution.\n'
+           '\n'
+           'To find VaR at 95% confidence, we need to know the value of '
+           'QN(0;1)\n'
+           '1¡c for c = 0.05 (since 100% - 5% = 95%).\n'
+           '\n'
+           'Unfortunately, Context 2 does not provide a direct way to '
+           'calculate this value. However, from Context 4 — '
+           'deutsch_value_at_risk_textbook.pdf, page 19, we have:\n'
+           '\n'
+           'ea= Q\n'
+           'N(0;1)\n'
+           'c = ¡Q\n'
+           'N(0;1)\n'
+           '1¡c\n'
+           '\n'
+           'This implies that the c-th quantile of the standard normal '
+           'distribution can be found using the inverse of the cumulative '
+           'distribution function (CDF) of the standard normal distribution.\n'
+           '\n'
+           'To find VaR at 95% confidence, we need to calculate QN(0;1)\n'
+           '1¡c for c = 0.05. However, this value is not explicitly provided '
+           'in the context documents.\n'
+           '\n'
+           'Therefore, I must state that the context documents do not contain '
+           'sufficient information to accurately answer your question '
+           'regarding the specific value of VaR at 95% confidence.',
+ 'context_used': '[Context 1 — sun_2023_bunker_hedging_cvar_optimization.pdf, '
+                 'page 2]\n'
+                 'in the shipping industry occurred, making their strategies '
+                 'inefﬁcient. Thus, there have\n'
+                 'been good reasons for the management layer’s judgement and '
+                 'the perception of risk. From\n'
+                 'a theoretical perspective, the traditional objective of '
+                 'hedging is minimizing variance [17].\n'
+                 'However, variance penalizes the risk and gain equally which '
+                 'exhibits inferior behavior\n'
+                 'when the distribution of returns is not symmetrical. This '
+                 'leads to the exploration of new\n'
+                 'measures of risk and investors’ motivation.\n'
+                 'In risk management, VaR and CVaR are two dominant quantile '
+                 'downside risk mea-\n'
+                 'sures. For some given conﬁdence level α, VaR refers to the '
+                 'values of the (1− α) quantile\n'
+                 'of the distribution while CVaR refers to the average '
+                 'value-at-risk (VaR) which is a coher-\n'
+                 '\n'
+                 '---\n'
+                 '\n'
+                 '[Context 2 — deutsch_value_at_risk_textbook.pdf, page 45]\n'
+                 'oftheserandomvariables:\n'
+                 'var[±V] ¼\n'
+                 'nX\n'
+                 'i;j=1\n'
+                 'e¢i e¢jcov[±Zi;±Z j]\n'
+                 '=\n'
+                 'nX\n'
+                 'i;j=1\n'
+                 'e¢i±§ij e¢j (2.8)\n'
+                 '= ±t\n'
+                 'nX\n'
+                 'i;j=1\n'
+                 'e¢i¾i½ij¾j f¢j\n'
+                 '² ThustheValueatRiskis\n'
+                 'VaRV(c) ¼ Q1¡c\n'
+                 'p\n'
+                 'var[±V]\n'
+                 '= Q1¡c\n'
+                 'p\n'
+                 'e¢±§ e¢\n'
+                 '= Q1¡c\n'
+                 'p\n'
+                 '±t\n'
+                 'vuut\n'
+                 'nX\n'
+                 'i;j=1\n'
+                 'e¢i¾i½ij¾j e¢j (2.9)\n'
+                 '\n'
+                 '---\n'
+                 '\n'
+                 '[Context 3 — sun_2023_bunker_hedging_cvar_optimization.pdf, '
+                 'page 11]\n'
+                 'constraint of 90% CVaR values. Figure 5 shows the optimal '
+                 'portfolio proﬁts of the out-of-\n'
+                 'sample and in-sample results. From the ﬁgure, we can see '
+                 'that the difference in the optimal\n'
+                 'portfolio proﬁts between the two samples is 7.9%, which is '
+                 'less than 10%. The results show\n'
+                 'that our model has a relatively robust performance.\n'
+                 'J. Mar. Sci. Eng. 2023, 11, x FOR PEER REVIEW 13 of 18 \n'
+                 ' \n'
+                 ' \n'
+                 ' \n'
+                 'Figure 4. The optimized portfolio rate of return of all '
+                 'strategies. \n'
+                 '4.3. Out-of-Sample Results \n'
+                 'We examine the consistency of out-of-sampl e and in-sample '
+                 'results with the same \n'
+                 'constraint of 90% CVaR values. Figure 5 shows the optimal '
+                 'portfolio profits of the out-of-\n'
+                 'sample and in-sample results. From the figure, we can see '
+                 'that the difference in the opti-\n'
+                 '\n'
+                 '---\n'
+                 '\n'
+                 '[Context 4 — deutsch_value_at_risk_textbook.pdf, page 19]\n'
+                 '– ea isthe c-percentileofthestandardnormaldistribution\n'
+                 'ea= Q\n'
+                 'N(0;1)\n'
+                 'c = ¡Q\n'
+                 'N(0;1)\n'
+                 '1¡c\n'
+                 ':\n'
+                 '– '
+                 'Thelaststepfollowsfromthesymmetryofthestandardnormaldistribu-\n'
+                 'tion:\n'
+                 'N(¡x)=1 ¡ N(x)=) Q\n'
+                 'N(0;1)\n'
+                 'c = ¡Q\n'
+                 'N(0;1)\n'
+                 '1¡c\n'
+                 '– Nowsolve1.14fortheVaRofashortpositionin ¡N riskfactors S:\n'
+                 'VaR(c)= ¡NS(t)\n'
+                 'h\n'
+                 '1 ¡exp\n'
+                 '³\n'
+                 '¹±t ¡ Q\n'
+                 'N(0;1)\n'
+                 '1¡c ¾\n'
+                 'p\n'
+                 '±t\n'
+                 '´i\n'
+                 '² Summary:\n'
+                 'VaRlong(c)= NS(t)\n'
+                 'h\n'
+                 '1 ¡exp\n'
+                 '³\n'
+                 '¹±t+ Q\n'
+                 'N(0;1)\n'
+                 '1¡c ¾\n'
+                 'p\n'
+                 '±t\n'
+                 '´i\n'
+                 'VaRshort(c)= ¡NS(t)\n'
+                 'h\n'
+                 '1 ¡exp\n'
+                 '³\n'
+                 '¹±t ¡ Q\n'
+                 'N(0;1)\n'
+                 '1¡c ¾\n'
+                 'p\n'
+                 '±t\n'
+                 '´i\n'
+                 '(1.15)\n'
+                 '² ThesetwoVaR’sare not equalinmagnitude,dueto\n'
+                 '\n'
+                 '---\n'
+                 '\n'
+                 '[Context 5 — sun_2023_bunker_hedging_cvar_optimization.pdf, '
+                 'page 11]\n'
+                 'J. Mar. Sci. Eng. 2023, 11, 894 12 of 16\n'
+                 'shows that Strategy 2 gains a higher portfolio rate of '
+                 'return than Strategy 1. Aside from\n'
+                 'this, the solution with the Maximum Loss constraint is '
+                 'always greater than that with 90%\n'
+                 'CVaR constraint, and greater than that with VaR constraint. '
+                 'This is due to the facts that\n'
+                 'Maximum Loss has the least constraint.\n'
+                 'J. Mar. Sci. Eng. 2023, 11, x FOR PEER REVIEW 13 of 18 \n'
+                 ' \n'
+                 ' \n'
+                 ' \n'
+                 'Figure 4. The optimized portfolio rate of return of all '
+                 'strategies. \n'
+                 '4.3. Out-of-Sample Results \n'
+                 'We examine the consistency of out-of-sampl e and in-sample '
+                 'results with the same \n'
+                 'constraint of 90% CVaR values. Figure 5 shows the optimal '
+                 'portfolio profits of the out-of-\n'
+                 'sample and in-sample results. From the figure, we can see '
+                 'that the difference in the opti-',
+ 'query': 'What is VaR at 95% confidence?',
+ 'retrieval_count': 5,
+ 'sources': [{'category': 'hedging',
+              'file': 'sun_2023_bunker_hedging_cvar_optimization.pdf',
+              'page': 2,
+              'preview': 'in the shipping industry occurred, making their '
+                         'strategies inefﬁcient. Thus, there have\n'
+                         'been good reasons for the management layer’s '
+                         'judgement and the perception of risk. From\n'
+                         'a theoretical perspectiv...'},
+             {'category': 'risk_metrics',
+              'file': 'deutsch_value_at_risk_textbook.pdf',
+              'page': 45,
+              'preview': 'oftheserandomvariables:\n'
+                         'var[±V] ¼\n'
+                         'nX\n'
+                         'i;j=1\n'
+                         'e¢i e¢jcov[±Zi;±Z j]\n'
+                         '=\n'
+                         'nX\n'
+                         'i;j=1\n'
+                         'e¢i±§ij e¢j (2.8)\n'
+                         '= ±t\n'
+                         'nX\n'
+                         'i;j=1\n'
+                         'e¢i¾i½ij¾j f¢j\n'
+                         '² ThustheValueatRiskis\n'
+                         'VaRV(c) ¼ Q1¡c\n'
+                         'p\n'
+                         'var[±V]\n'
+                         '= Q1¡c\n'
+                         'p\n'
+                         'e¢±§ e¢\n'
+                         '= Q1¡c\n'
+                         'p\n'
+                         '±t\n'
+                         'v...'},
+             {'category': 'hedging',
+              'file': 'sun_2023_bunker_hedging_cvar_optimization.pdf',
+              'page': 11,
+              'preview': 'constraint of 90% CVaR values. Figure 5 shows the '
+                         'optimal portfolio proﬁts of the out-of-\n'
+                         'sample and in-sample results. From the ﬁgure, we can '
+                         'see that the difference in the optimal\n'
+                         'portfolio proﬁts b...'},
+             {'category': 'risk_metrics',
+              'file': 'deutsch_value_at_risk_textbook.pdf',
+              'page': 19,
+              'preview': '– ea isthe '
+                         'c-percentileofthestandardnormaldistribution\n'
+                         'ea= Q\n'
+                         'N(0;1)\n'
+                         'c = ¡Q\n'
+                         'N(0;1)\n'
+                         '1¡c\n'
+                         ':\n'
+                         '– '
+                         'Thelaststepfollowsfromthesymmetryofthestandardnormaldistribu-\n'
+                         'tion:\n'
+                         'N(¡x)=1 ¡ N(x)=) Q\n'
+                         'N(0;1)\n'
+                         'c = ¡Q\n'
+                         'N(0;1)\n'
+                         '1¡...'}]}
+((env_dissertation) ) (base) seymanurergezgin@MacBook-Pro-2 github % 
+
+
+# second test after bug fixes at the end of phase 2: 
+
+((env_dissertation) ) (base) seymanurergezgin@MacBook-Pro-2 github % source env_dissertation/bin/activate
+python3 -c "
+from src.document_loader import DocumentLoader
+from src.vector_store import VectorStore
+vs = VectorStore()
+loader = DocumentLoader(vs)
+count = loader.load_category('maritime', force_reload=True)
+print('Maritime chunks loaded:', count)
+print('All collections:', vs.list_collections())
+"
+
+2026-06-29 17:05:44 | INFO     | config.settings | Settings loaded. Project root: /Users/seymanurergezgin/Desktop/gre/thesis/github
+2026-06-29 17:05:46 | INFO     | src.embeddings | Using Ollama embeddings: nomic-embed-text @ http://localhost:11434
+2026-06-29 17:05:46 | INFO     | src.vector_store | VectorStore initialised at: data/embeddings/chroma_store
+2026-06-29 17:05:46 | INFO     | src.vector_store | Deleted collection: maritime_domain
+2026-06-29 17:05:46 | INFO     | src.document_loader | Deleted collection 'maritime' for reload.
+2026-06-29 17:05:46 | INFO     | src.document_loader | Loading 8 files from /Users/seymanurergezgin/Desktop/gre/thesis/github/data/documents/maritime...
+2026-06-29 17:06:28 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:29 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:30 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:32 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:33 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:34 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:35 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:36 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:37 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:39 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:40 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:41 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:42 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:43 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:44 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:45 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:47 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:48 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:49 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:50 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:51 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:52 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:53 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:55 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:56 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:57 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:58 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:06:59 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:00 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:02 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:03 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:04 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:05 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:07 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:08 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:09 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:10 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:11 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:12 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:14 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:15 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:16 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:17 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:18 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:20 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:21 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:22 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:23 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:24 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:26 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:27 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:28 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:29 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:30 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:32 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:33 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:34 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:35 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:36 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:37 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:39 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:40 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:41 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:42 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:43 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:45 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:46 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:47 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:49 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:49 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:50 | INFO     | src.vector_store | Added 3483/3483 documents to collection 'maritime'.
+2026-06-29 17:07:51 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:52 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:53 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:54 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:55 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:56 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:57 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:07:58 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:00 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:01 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:02 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:03 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:04 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:05 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:06 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:07 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:08 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:09 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:10 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:11 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:13 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:14 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:15 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:16 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:17 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:18 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:19 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:21 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:22 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:23 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:24 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:25 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:27 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:28 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:29 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:30 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:31 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:33 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:34 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:35 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:36 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:37 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:38 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:39 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:41 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:42 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:43 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:44 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:45 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:47 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:48 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:49 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:50 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:51 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:53 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:54 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:55 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:56 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:57 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:58 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:08:59 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:00 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:02 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:03 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:04 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:05 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:07 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:08 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:09 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:10 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:10 | INFO     | src.vector_store | Added 3483/3483 documents to collection 'all'.
+2026-06-29 17:09:10 | INFO     | src.document_loader |   stopford_maritime_economics_3rd_ed.pdf → 3483 chunks (3483 new)
+2026-06-29 17:09:12 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:13 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:13 | INFO     | src.vector_store | Added 72/72 documents to collection 'maritime'.
+2026-06-29 17:09:13 | INFO     | src.vector_store | All 72 documents already in collection 'all'.
+2026-06-29 17:09:13 | INFO     | src.document_loader |   cimac_2019_marine_fuel_stability_compatibility.pdf → 72 chunks (72 new)
+2026-06-29 17:09:14 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:14 | INFO     | src.vector_store | Added 24/24 documents to collection 'maritime'.
+2026-06-29 17:09:14 | INFO     | src.vector_store | All 24 documents already in collection 'all'.
+2026-06-29 17:09:14 | INFO     | src.document_loader |   imo_marpol_annex_vi_supplement_2019.pdf → 24 chunks (24 new)
+2026-06-29 17:09:14 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:14 | INFO     | src.vector_store | Added 5/5 documents to collection 'maritime'.
+2026-06-29 17:09:15 | INFO     | src.vector_store | All 5 documents already in collection 'all'.
+2026-06-29 17:09:15 | INFO     | src.document_loader |   marpol_annex_vi_overview.pdf → 5 chunks (5 new)
+2026-06-29 17:09:16 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:18 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:18 | INFO     | src.vector_store | Added 84/84 documents to collection 'maritime'.
+2026-06-29 17:09:18 | INFO     | src.vector_store | All 84 documents already in collection 'all'.
+2026-06-29 17:09:18 | INFO     | src.document_loader |   imo_mepc320_74_sulphur_implementation_guidelines.pdf → 84 chunks (84 new)
+2026-06-29 17:09:19 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:21 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:21 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:22 | INFO     | src.vector_store | Added 139/139 documents to collection 'maritime'.
+2026-06-29 17:09:22 | INFO     | src.vector_store | All 139 documents already in collection 'all'.
+2026-06-29 17:09:22 | INFO     | src.document_loader |   ics_2019_sulphur_cap_compliance_guide.pdf → 139 chunks (139 new)
+2026-06-29 17:09:29 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:30 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:31 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:33 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:34 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:35 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:36 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:38 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:39 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:40 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:42 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:43 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:44 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:44 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:44 | INFO     | src.vector_store | Added 673/673 documents to collection 'maritime'.
+2026-06-29 17:09:46 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:47 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:48 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:50 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:51 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:52 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:53 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:54 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:56 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:57 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:09:58 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:10:00 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:10:01 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:10:02 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:10:02 | INFO     | src.vector_store | Added 673/673 documents to collection 'all'.
+2026-06-29 17:10:02 | INFO     | src.document_loader |   imo_mepc70_fuel_oil_availability_assessment_2016.pdf → 673 chunks (673 new)
+2026-06-29 17:10:02 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:10:02 | INFO     | src.vector_store | Added 22/22 documents to collection 'maritime'.
+2026-06-29 17:10:03 | INFO     | src.vector_store | All 22 documents already in collection 'all'.
+2026-06-29 17:10:03 | INFO     | src.document_loader |   imo_2020_sulphur_limit_faq.pdf → 22 chunks (22 new)
+Maritime chunks loaded: 4502
+All collections: {'risk_metrics': 169, 'hedging': 408, 'maritime': 4502, 'all': 5079}
+((env_dissertation) ) (base) seymanurergezgin@MacBook-Pro-2 github % python3 -c "
+from src.rag_pipeline import RAGPipeline
+r = RAGPipeline(collection='risk_metrics').query('Explain what Value at Risk means for a maritime shipping company in plain English')
+print(r['answer'])
+"
+
+2026-06-29 17:11:50 | INFO     | config.settings | Settings loaded. Project root: /Users/seymanurergezgin/Desktop/gre/thesis/github
+2026-06-29 17:11:52 | INFO     | src.embeddings | Using Ollama embeddings: nomic-embed-text @ http://localhost:11434
+2026-06-29 17:11:52 | INFO     | src.vector_store | VectorStore initialised at: data/embeddings/chroma_store
+2026-06-29 17:11:52 | INFO     | src.llm_provider | Using LLM provider: openai (model: gpt-4o-mini)
+2026-06-29 17:11:52 | INFO     | httpx | HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-06-29 17:12:04 | INFO     | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-29 17:12:04 | INFO     | src.llm_provider | OpenAI (gpt-4o-mini) responded in 10.71s
+2026-06-29 17:12:11 | INFO     | src.rag_pipeline | RAG query answered in 11.77s | 5 context chunks | provider: openai
+**Summary:**
+Value at Risk (VaR) is a financial metric that helps a maritime shipping company understand the potential loss in value of its investments or portfolio due to fluctuations in market conditions, such as fuel prices. It provides a way to quantify risk over a specific time frame and confidence level.
+
+**Detailed Explanation:**
+Value at Risk (VaR) is a tool used to measure the risk of loss on an investment or portfolio. For a maritime shipping company, this means assessing how much money it could potentially lose due to changes in fuel prices or other market factors over a certain period.
+
+1. **Understanding VaR**: VaR gives a specific figure that represents the worst expected loss over a defined time period, given a certain confidence level. For example, if a company has a VaR of €615.66, it means that there is a certain confidence (often 95% or 99%) that the company will not lose more than this amount in a specified time frame (like a day or a month).
+
+2. **Risk Factors**: The risks that affect the company's portfolio can include various factors, such as fuel prices, currency exchange rates, and interest rates. These are known as risk factors. The fluctuations in these factors can lead to changes in the overall value of the company's investments.
+
+3. **Portfolio Impact**: The VaR metric can be calculated for individual positions within the portfolio and then summed up to understand the total risk. This helps the company see how different investments contribute to overall risk and allows for better risk management strategies.
+
+4. **Limitations**: While VaR is a useful tool, it has limitations. It does not predict extreme losses beyond the VaR threshold and assumes that past market behavior will continue into the future. Therefore, it should be used alongside other risk management strategies.
+
+In summary, for a maritime shipping company, understanding VaR helps in making informed decisions about managing fuel price risks and other financial uncertainties, ultimately supporting better financial stability and planning.
+((env_dissertation) ) (base) seymanurergezgin@MacBook-Pro-2 github % 

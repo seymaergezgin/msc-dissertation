@@ -1,0 +1,120 @@
+{
+  "snapshot_date": "2024-11-15",
+  "currency": "USD",
+  "fuel_prices_per_metric_ton": {
+    "VLSFO": 470.73,
+    "HSFO": 385.14,
+    "MGO": 545.62
+  },
+  "methodology": {
+    "var_method": "Variance-Covariance (Delta-Normal)",
+    "confidence_levels": [
+      "95%",
+      "99%"
+    ],
+    "time_horizon": "10 trading days",
+    "volatility_basis": "Historical daily returns, recent 2-year window",
+    "correlation_assumption": "Perfect positive correlation (conservative upper bound)"
+  },
+  "vessels": [
+    {
+      "vessel_name": "MV Atlantic Pioneer",
+      "vessel_type": "Panamax Bulker",
+      "fuel_type": "VLSFO",
+      "annual_consumption_mt": 8500,
+      "fuel_price_usd_per_mt": 470.73,
+      "annual_fuel_cost_usd": 4001205,
+      "hedge_ratio_pct": 55,
+      "hedged_exposure_usd": 2200663,
+      "unhedged_exposure_usd": 1800542,
+      "risk_metrics": {
+        "var_95_10d_usd": 43901,
+        "var_99_10d_usd": 62076,
+        "cvar_95_10d_usd": 56193,
+        "daily_volatility_pct": 2.53,
+        "annualised_volatility_pct": 40.2
+      }
+    },
+    {
+      "vessel_name": "MV Nordic Star",
+      "vessel_type": "Capesize Bulker",
+      "fuel_type": "VLSFO",
+      "annual_consumption_mt": 18000,
+      "fuel_price_usd_per_mt": 470.73,
+      "annual_fuel_cost_usd": 8473140,
+      "hedge_ratio_pct": 40,
+      "hedged_exposure_usd": 3389256,
+      "unhedged_exposure_usd": 5083884,
+      "risk_metrics": {
+        "var_95_10d_usd": 92968,
+        "var_99_10d_usd": 131455,
+        "cvar_95_10d_usd": 118999,
+        "daily_volatility_pct": 2.53,
+        "annualised_volatility_pct": 40.2
+      }
+    },
+    {
+      "vessel_name": "MV Pacific Eagle",
+      "vessel_type": "Handymax",
+      "fuel_type": "VLSFO",
+      "annual_consumption_mt": 5200,
+      "fuel_price_usd_per_mt": 470.73,
+      "annual_fuel_cost_usd": 2447796,
+      "hedge_ratio_pct": 65,
+      "hedged_exposure_usd": 1591067,
+      "unhedged_exposure_usd": 856729,
+      "risk_metrics": {
+        "var_95_10d_usd": 26857,
+        "var_99_10d_usd": 37976,
+        "cvar_95_10d_usd": 34377,
+        "daily_volatility_pct": 2.53,
+        "annualised_volatility_pct": 40.2
+      }
+    },
+    {
+      "vessel_name": "MV Emerald Bay",
+      "vessel_type": "Supramax",
+      "fuel_type": "VLSFO",
+      "annual_consumption_mt": 6800,
+      "fuel_price_usd_per_mt": 470.73,
+      "annual_fuel_cost_usd": 3200964,
+      "hedge_ratio_pct": 50,
+      "hedged_exposure_usd": 1600482,
+      "unhedged_exposure_usd": 1600482,
+      "risk_metrics": {
+        "var_95_10d_usd": 35121,
+        "var_99_10d_usd": 49661,
+        "cvar_95_10d_usd": 44955,
+        "daily_volatility_pct": 2.53,
+        "annualised_volatility_pct": 40.2
+      }
+    },
+    {
+      "vessel_name": "MV Iron Maiden",
+      "vessel_type": "VLCC Tanker",
+      "fuel_type": "HSFO",
+      "annual_consumption_mt": 42000,
+      "fuel_price_usd_per_mt": 385.14,
+      "annual_fuel_cost_usd": 16175880,
+      "hedge_ratio_pct": 30,
+      "hedged_exposure_usd": 4852764,
+      "unhedged_exposure_usd": 11323116,
+      "risk_metrics": {
+        "var_95_10d_usd": 177482,
+        "var_99_10d_usd": 250957,
+        "cvar_95_10d_usd": 227177,
+        "daily_volatility_pct": 2.53,
+        "annualised_volatility_pct": 40.2
+      }
+    }
+  ],
+  "portfolio_summary": {
+    "total_annual_fuel_cost_usd": 34298985,
+    "total_vessels": 5,
+    "portfolio_var_95_10d_usd": 376329,
+    "portfolio_var_99_10d_usd": 532125,
+    "portfolio_cvar_95_10d_usd": 481701,
+    "average_hedge_ratio_pct": 48,
+    "interpretation": "The portfolio's 10-day 95% VaR is $376,329, meaning there is a 5% chance of losing more than this amount over any 10-day period. The CVaR (Expected Shortfall) of $481,701 represents the average loss in the worst 5% of scenarios."
+  }
+}

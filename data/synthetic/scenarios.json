@@ -1,0 +1,75 @@
+{
+  "scenario_date": "2024-11-15",
+  "base_fuel_prices_usd_mt": {
+    "VLSFO": 470.73,
+    "HSFO": 385.14,
+    "MGO": 545.62
+  },
+  "scenarios": [
+    {
+      "id": "S001",
+      "name": "Brent Price Spike +30%",
+      "description": "Major supply disruption (e.g., Middle East escalation) drives Brent up 30%.",
+      "trigger": "Geopolitical supply shock",
+      "vlsfo_change_pct": 26,
+      "hsfo_change_pct": 28,
+      "vlsfo_new_price": 593.12,
+      "hsfo_new_price": 492.98,
+      "portfolio_pnl_impact_usd": -4115878,
+      "probability_12m_pct": 8,
+      "horizon": "3 months"
+    },
+    {
+      "id": "S002",
+      "name": "Brent Price Crash -40%",
+      "description": "Demand collapse pushes Brent below $50/bbl (COVID-2020 scenario).",
+      "trigger": "Global demand shock",
+      "vlsfo_change_pct": -38,
+      "hsfo_change_pct": -40,
+      "vlsfo_new_price": 291.85,
+      "hsfo_new_price": 231.08,
+      "portfolio_pnl_impact_usd": 5487837,
+      "probability_12m_pct": 5,
+      "horizon": "6 months"
+    },
+    {
+      "id": "S003",
+      "name": "IMO Regulation Tightening (0.1% cap)",
+      "description": "New global 0.1% sulphur cap widens VLSFO/HSFO spread significantly.",
+      "trigger": "Regulatory change",
+      "vlsfo_change_pct": 10,
+      "hsfo_change_pct": -18,
+      "vlsfo_new_price": 517.8,
+      "hsfo_new_price": 315.81,
+      "new_spread_usd_mt": 201.99,
+      "portfolio_pnl_impact_usd": -1714949,
+      "probability_12m_pct": 12,
+      "horizon": "18 months"
+    },
+    {
+      "id": "S004",
+      "name": "Forced Hedge Unwind",
+      "description": "Credit event requires early unwind of hedge at unfavourable mark-to-market.",
+      "trigger": "Counterparty/credit event",
+      "vlsfo_change_pct": 0,
+      "hsfo_change_pct": 0,
+      "hedge_ratio_reduction_pct": 50,
+      "additional_unhedged_cost_usd": 1028969,
+      "probability_12m_pct": 3,
+      "horizon": "Immediate"
+    },
+    {
+      "id": "S005",
+      "name": "Moderate Upside: OPEC+ Cuts +15%",
+      "description": "OPEC+ announces additional 1.5mb/d production cut, Brent rises 15%.",
+      "trigger": "OPEC+ supply reduction",
+      "vlsfo_change_pct": 12,
+      "hsfo_change_pct": 14,
+      "vlsfo_new_price": 527.22,
+      "hsfo_new_price": 439.06,
+      "portfolio_pnl_impact_usd": -2057939,
+      "probability_12m_pct": 25,
+      "horizon": "6 months"
+    }
+  ]
+}
