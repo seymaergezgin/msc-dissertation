@@ -40,7 +40,7 @@ User Query
 ### 1. Clone and navigate
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/seymaergezgin/msc-dissertation.git
 cd thesis-risk-narrative
 ```
 
